@@ -201,7 +201,7 @@ const createTodoActions = (todo) => {
 
 const renderTodoList = (todos) => {
   if (!todos?.length) {
-    todoListContainer.innerHTML = "<h2>Empty</h2>";
+    todoListContainer.innerHTML = "<h2>No tasks yet</h2>";
     return;
   }
 

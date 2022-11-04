@@ -4,7 +4,8 @@ body {
   font-family: "Raleway", sans-serif;
 }
 
-h2 {
+h2,
+h6 {
   margin: 0;
   padding: 0;
 }
@@ -41,6 +42,7 @@ button {
   gap: 30px;
   padding: 25px;
   box-sizing: border-box;
+  flex-wrap: wrap;
 }
 
 .container > .item {
@@ -77,19 +79,24 @@ button {
   border-bottom: 1px solid rgba(0, 0, 0, 0.3);
   background: transparent;
   transition: 0.1s;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .todo-list > li:hover {
   background-color: #f3f2f0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.7);
 }
-
+.todo-list > li > .todo-content {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
 .todo-list > li > .todo-content.completed {
   color: green;
 }
 
 .todo-list > li > .todo-content > h6 {
-  margin: 0 0 8px 4px;
   font-size: 18px;
 }
 
@@ -101,13 +108,12 @@ button {
 
 .todo-list > li > .todo-actions {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
+  gap: 8px;
 }
 
 .todo-list > li > .todo-actions > button {
   flex: 1;
-  margin: 0px 8px;
 }
 
 #todo-form {
@@ -116,6 +122,10 @@ button {
   padding: 12px;
   border: 1px solid #666;
   border-radius: 12px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .buttons-wrapper {
@@ -130,7 +140,6 @@ button {
 .input-wrapper {
   display: flex;
   flex-direction: column;
-  margin: 8px 0px;
 }
 
 .input-wrapper.error {
