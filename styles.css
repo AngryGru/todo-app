@@ -1,0 +1,180 @@
+body {
+  padding: 0px;
+  margin: 0px;
+  font-family: "Raleway", sans-serif;
+}
+
+h2 {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  background-color: transparent;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+
+.delete-btn:hover {
+  border-color: crimson;
+  color: crimson;
+}
+.submit-btn:hover {
+  border-color: #0bda51;
+  color: #0bda51;
+}
+.edit-btn:hover {
+  border-color: #bf40bf;
+  color: #bf40bf;
+}
+
+.container {
+  width: 100%;
+  max-width: 1500px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 25px;
+  box-sizing: border-box;
+}
+
+.container > .item {
+  flex: 1 0 50%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+#filter-container {
+  margin-bottom: 12px;
+}
+
+#filter-container > input {
+  width: 100%;
+  padding: 8px 16px;
+  font-size: 18px;
+  box-sizing: border-box;
+}
+
+.todo-list {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.todo-list > li {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 2px;
+  padding: 12px 16px;
+  border-radius: 4px 4px 0px 0px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  background: transparent;
+  transition: 0.1s;
+}
+
+.todo-list > li:hover {
+  background-color: #f3f2f0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.7);
+}
+
+.todo-list > li > .todo-content.completed {
+  color: green;
+}
+
+.todo-list > li > .todo-content > h6 {
+  margin: 0 0 8px 4px;
+  font-size: 18px;
+}
+
+.todo-list > li > .todo-content > p {
+  margin: 0px;
+  padding: 0px;
+  font-size: 14px;
+}
+
+.todo-list > li > .todo-actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.todo-list > li > .todo-actions > button {
+  flex: 1;
+  margin: 0px 8px;
+}
+
+#todo-form {
+  flex-basis: 30%;
+  margin-left: auto;
+  padding: 12px;
+  border: 1px solid #666;
+  border-radius: 12px;
+}
+
+.buttons-wrapper {
+  display: flex;
+}
+
+.buttons-wrapper > button {
+  flex: 1;
+  margin: 0 16px;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 8px 0px;
+}
+
+.input-wrapper.error {
+  color: red;
+}
+
+.input-wrapper > label {
+  margin-bottom: 4px;
+  font-size: 16px;
+}
+
+.input-wrapper > input {
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 18px;
+  box-sizing: border-box;
+}
+
+input:focus {
+  outline: none;
+  border: 1px solid blue;
+}
+textarea:focus {
+  outline: none;
+  border: 1px solid blue;
+}
+
+.input-wrapper > textarea {
+  resize: none;
+  font-size: 14px;
+}
+
+.input-wrapper.error > input,
+.input-wrapper.error > textarea {
+  border: 1px solid red;
+}
+
+.input-wrapper > .description {
+  font-size: 12px;
+  margin-left: 8px;
+  margin-top: 6px;
+}
+
+input,
+#description::-webkit-input-placeholder {
+  font-family: "Raleway", sans-serif;
+}
